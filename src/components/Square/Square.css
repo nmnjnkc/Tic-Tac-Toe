@@ -1,0 +1,15 @@
+.squares {
+  background: #f2f2f2;
+  border: none;
+  font-size: 4em;
+  cursor: pointer;
+  outline: none;
+}
+
+.X {
+  color: #133463;
+}
+
+.O {
+  color: #ffd700;
+}/*# sourceMappingURL=Square.css.map */

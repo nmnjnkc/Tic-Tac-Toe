@@ -1,24 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState, useEffect} from "react";
+import { Routes, Route } from "react-router-dom";
+import Footer from "./components/Footer/Footer";
+import Header from "./components/Header/Header";
+import GameContext from "./GameContext";
+import GamePage from "./pages/GamePage/GamePage";
+import LandingPage from "./pages/LandingPage/LandingPage";
 
 function App() {
+  const [playerName, setPlayerName] = useState({
+    player1: localStorage.getItem("player1") || "",
+    player2: localStorage.getItem("player2") || ""
+  });
+
+  useEffect(() => {
+    localStorage.setItem("player1", playerName.player1);
+    localStorage.setItem("player2", playerName.player2);
+  }, [playerName]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Header/>
+      <GameContext.Provider value={{playerName, setPlayerName}}>
+        <Routes>
+
+          <Route  path="/" element={<LandingPage />} />
+          <Route path="/game" element={<GamePage />} />
+
+        </Routes>
+      </GameContext.Provider>
+      <Footer/>
+    </>
   );
 }
 

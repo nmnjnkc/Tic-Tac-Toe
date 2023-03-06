@@ -1,0 +1,8 @@
+.board {
+  background: #474343;
+  width: 500px;
+  height: 500px;
+  display: grid;
+  grid-template: repeat(3, 1fr)/repeat(3, 1fr);
+  gap: 1em;
+}/*# sourceMappingURL=Board.css.map */
