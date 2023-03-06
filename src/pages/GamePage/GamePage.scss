@@ -1,5 +1,5 @@
 
-.wrapper {
+.board-wrapper {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -13,3 +13,9 @@
   
   }
   
+  @media screen and (max-width: 768px) {
+    .board-wrapper{
+      flex-direction: column;
+      
+    }
+  }

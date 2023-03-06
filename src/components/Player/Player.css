@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   width: 15%;
-  min-height: 10%;
   margin: 10px;
   border: 1px solid white;
   border-radius: 15px;
@@ -15,7 +14,28 @@
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 .player * {
-  padding: 20px;
+  padding: 15px;
   text-align: center;
   font-size: 1.3em;
+}
+
+@media screen and (max-width: 768px) {
+  .player {
+    width: 200px;
+    margin: 20px 0;
+  }
+  .player * {
+    padding: 10px;
+    font-size: 1.2em;
+  }
+}
+@media screen and (max-width: 426px) {
+  .player {
+    width: 150px;
+    margin: 30px 0;
+  }
+  .player * {
+    padding: 5px;
+    font-size: 1.1em;
+  }
 }/*# sourceMappingURL=Player.css.map */

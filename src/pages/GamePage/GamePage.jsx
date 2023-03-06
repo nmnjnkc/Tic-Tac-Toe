@@ -63,7 +63,7 @@ const GamePage = () => {
       <div className="info-wrapper">
         <h3>{`Next Player is ${xO}`} </h3>
       </div>
-      <div className="wrapper">
+      <div className="board-wrapper">
         <Player score={score.X} player ={playerName.player1}/>
         <Board squares={board[stepNumber]} onClick={handleClick}/>
         <Player score={score.O} player ={playerName.player2}/>

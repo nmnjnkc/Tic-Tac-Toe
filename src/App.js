@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import GameContext from "./GameContext";
+import ErrorPage from "./pages/ErrorPage/ErrorPage";
 import GamePage from "./pages/GamePage/GamePage";
 import LandingPage from "./pages/LandingPage/LandingPage";
 
@@ -25,6 +26,7 @@ function App() {
 
           <Route  path="/" element={<LandingPage />} />
           <Route path="/game" element={<GamePage />} />
+          <Route path="*" element={<ErrorPage/>}/>
 
         </Routes>
       </GameContext.Provider>

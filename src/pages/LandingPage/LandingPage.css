@@ -1,4 +1,9 @@
-.info {
+.flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.flex .info {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,15 +17,12 @@
   padding: 20px;
   max-width: 400px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-  margin-left: 33%;
 }
-
-.info label {
+.flex .info label {
   font-size: 20px;
   margin-bottom: 10px;
 }
-
-.info input {
+.flex .info input {
   padding: 10px;
   font-size: 16px;
   border-radius: 5px;
@@ -28,14 +30,12 @@
   margin-bottom: 20px;
   width: 300px;
 }
-
-.info input:focus {
+.flex .info input:focus {
   outline: none;
   border-color: #0077ff;
   box-shadow: 0 0 0 2px rgba(0, 119, 255, 0.2);
 }
-
-.btn {
+.flex .btn {
   background-color: #0077ff;
   color: #fff;
   border-radius: 5px;
@@ -45,7 +45,6 @@
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-
-.btn:hover {
+.flex .btn:hover {
   background-color: #0066cc;
 }/*# sourceMappingURL=LandingPage.css.map */

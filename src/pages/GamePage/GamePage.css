@@ -1,4 +1,4 @@
-.wrapper {
+.board-wrapper {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -9,4 +9,10 @@
   display: flex;
   justify-content: center;
   padding-bottom: 2em;
+}
+
+@media screen and (max-width: 768px) {
+  .board-wrapper {
+    flex-direction: column;
+  }
 }/*# sourceMappingURL=GamePage.css.map */
