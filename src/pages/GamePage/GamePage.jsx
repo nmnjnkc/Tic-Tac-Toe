@@ -14,15 +14,14 @@ const GamePage = () => {
     const [isDraw, setIsDraw] = useState(false);
     const {playerName} = useContext(GameContext)
     const xO = isNext ? "X" : "O";
+
   
   
     const handleClick = (i) => {
       const historyPoint = board.slice(0, stepNumber + 1);
       const current = historyPoint[stepNumber];
       const squares = [...current];
-      // return if won or occupied
-      if (winner || squares[i]) return;
-      // select square
+      if (squares[i]) return;
       squares[i] = xO;
       setBoard([...historyPoint, squares]);
       setStepNumber(historyPoint.length);
@@ -64,9 +63,10 @@ const GamePage = () => {
         <h3>{`Next Player is ${xO}`} </h3>
       </div>
       <div className="board-wrapper">
-        <Player score={score.X} player ={playerName.player1}/>
+        <Player score={score.X} player ={playerName.player1} addClass={xO === "X" ? "activeX" : ""}
+/>
         <Board squares={board[stepNumber]} onClick={handleClick}/>
-        <Player score={score.O} player ={playerName.player2}/>
+        <Player score={score.O} player ={playerName.player2} addClass={xO === "O" ? "activeO" : ""}/>
       </div>
      
       </>

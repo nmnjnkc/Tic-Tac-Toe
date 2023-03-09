@@ -8,7 +8,6 @@
   margin-bottom: 27%;
   border: 1px solid #ccc;
   border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.7);
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
@@ -38,4 +37,13 @@
     padding: 5px;
     font-size: 1.1em;
   }
+}
+.activeX {
+  border: 1px solid #006699;
+  box-shadow: 0 2px 3px 3px rgba(19, 52, 99, 0.2);
+}
+
+.activeO {
+  border: 1px solid #ffd700;
+  box-shadow: 0 2px 3px 3px rgba(243, 212, 36, 0.2);
 }/*# sourceMappingURL=Player.css.map */
